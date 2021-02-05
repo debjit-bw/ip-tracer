@@ -26,6 +26,7 @@ def dbmake():
             return(jsonify(hash_db))
         else:
             del hash_db[link[1]]
+            return(jsonify(hash_db))
     hash_db[link[0]] = link[1]
     return(jsonify(hash_db))
 
@@ -40,6 +41,7 @@ def redirex():
             return(jsonify(redirex_db))
         else:
             del redirex_db[link[1]]
+            return(jsonify(redirex_db))
     redirex_db[link[0]] = link[1]
     return(jsonify(redirex_db))
 
